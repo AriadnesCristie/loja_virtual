@@ -16,6 +16,8 @@ public class CupDesconto implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_cup_desc")
     private Long id;
 
+
+    @Column(nullable = false)
     private String codDesc;
 
     private BigDecimal valorRealDesc;
@@ -62,6 +64,7 @@ public class CupDesconto implements Serializable {
         this.dataValidadeCupom = dataValidadeCupom;
     }
 
+    @Column(nullable = false)
     @Temporal(TemporalType.DATE)
     private Date dataValidadeCupom;
 

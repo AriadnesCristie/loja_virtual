@@ -1,8 +1,8 @@
-import jdev.mentoria.lojavirtual.loja_virtual.Pessoa;
+package jdev.mentoria.lojavirtual.loja_virtual;
+
 
 import javax.persistence.*;
 import java.util.Date;
-
 
 @Entity
 @Table(name = "pessoa_fisica")
@@ -15,28 +15,22 @@ public class PessoaFisica extends Pessoa {
     private String cpf;
 
     @Temporal(TemporalType.DATE)
-    private Date dataNascimento;
+    private Date dataNasc;
 
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
+    public String getCpf() {
+        return cpf;
     }
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
-    public Date getDataNascimento() {
-        return dataNascimento;
+    public Date getDataNasc() {
+        return dataNasc;
     }
 
-    public String getCpf() {
-        return cpf;
+    public void setDataNasc(Date dataNasc) {
+        this.dataNasc = dataNasc;
     }
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-
-
-    }
-
+}

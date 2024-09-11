@@ -1,5 +1,6 @@
 package jdev.mentoria.lojavirtual.loja_virtual;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
@@ -12,10 +13,21 @@ public class PessoaJuridica extends Pessoa {
 
     private static final long serialVersionUID  = 1L;
 
+    @Column(nullable = false)
     private String cnpj;
+
+    @Column(nullable = false)
     private String inscEstadual;
+
     private String inscMunicipal;
+
+    @Column(nullable = false)
     private String nomeFantasia;
+
+    @Column(nullable = false)
+    private String razaoSocial;
+
+    private String categoria;
 
     public String getCategoria() {
         return categoria;
@@ -25,7 +37,6 @@ public class PessoaJuridica extends Pessoa {
         this.categoria = categoria;
     }
 
-    private String razaoSocial;
 
     public String getRazaoSocial() {
         return razaoSocial;
@@ -58,8 +69,6 @@ public class PessoaJuridica extends Pessoa {
     public void setInscEstadual(String inscEstadual) {
         this.inscEstadual = inscEstadual;
     }
-
-    private String categoria;
 
     public String getCnpj() {
         return cnpj;
